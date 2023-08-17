@@ -1,0 +1,62 @@
+<!DOCTYPE>
+<html>
+    <head>
+        <title>Move Rightaway</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+        <link rel="stylesheet" href="api.css">
+    </head>
+    <body>
+        <main>
+                <section class="header-section">
+                    <div class="schooled">
+                        <h1 class="schooled-title">
+                            Move Rightaway!
+                        </h1>
+                        <div class="Flightsearch">
+                            <h3>Search for available flights</h3>
+                            <div class="flights">
+                            <div style="margin-top: 16px">
+                                <p>Departure: </p>
+                                <p>Arrival: </p>
+                                <p>Date: </p>
+                                <p>Adult(s): </p>
+                            </div>
+                            <div style="margin-left: 10px">
+                                <input class="airports" type="text" id="departureAirport" value="Type airport code" onfocus="clearInput(this)">
+                                <input class="airports" type="text" id="destinationAirport" value="Type airport code" onfocus="clearInput(this)">
+                                <input class="date" type="text" id="date" value="(YYYY-MM-DD)" onfocus="clearInput(this)">
+                                <input class="adult" type="text" id="adult" value="1" onfocus="clearInput(this)">
+                                <button class="btn btn-primary" id="flightSearch">Search Flights</button>
+                            </div>                          
+                            <div class="Availableflights">
+                                <h4 id="Availableflights">Available flights are:</h4>
+                            </div>
+                            </div>
+                        </div>
+                    </div>
+                    </div>
+                    <div class="pros">
+                        <h2 class="pros-title"><span></span> </h2>
+                        <div class="pros-block">
+                        </div>
+                    </div>
+                </section>
+            </main>
+            <footer>
+                <div>
+                    <p>Temmy_mariam</p>
+                </div>
+            </footer>
+            <script>
+                function clearInput(inputElement) {
+                    inputElement.value = '';
+                }
+            </script>
+            <script src="api.js" type="module"></script>
+
+            <div class="result" id="class"></div>
+    </body>
+</html>
