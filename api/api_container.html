@@ -18,23 +18,24 @@
                         <div class="Flightsearch">
                             <h3>Search for available flights</h3>
                             <div class="flights">
-                            <div style="margin-top: 16px">
-                                <p>Departure: </p>
-                                <p>Arrival: </p>
-                                <p>Date: </p>
-                                <p>Adult(s): </p>
-                            </div>
                             <div style="margin-left: 10px">
-                                <input class="airports" type="text" id="departureAirport" value="Type airport code" onfocus="clearInput(this)">
-                                <input class="airports" type="text" id="destinationAirport" value="Type airport code" onfocus="clearInput(this)">
-                                <input class="date" type="text" id="date" value="(YYYY-MM-DD)" onfocus="clearInput(this)">
+                                <label for="Departure">Departure:</label><br>
+                                <input class="airports" type="text" id="departureAirport" value="Type airport code" onfocus="clearInput(this)"><br><br>
+
+                                <label for="Arrival">Arrival:</label><br>
+                                <input class="airports" type="text" id="destinationAirport" value="Type airport code" onfocus="clearInput(this)"><br><br>
+                                
+                                <label for="Date">Date:</label><br>
+                                <input class="date" type="text" id="date" value="(YYYY-MM-DD)" onfocus="clearInput(this)"><br><br>
+                                
+                                <label for="Adult">Adult(s):</label><br>
                                 <input class="adult" type="text" id="adult" value="1" onfocus="clearInput(this)">
-                                <button class="btn btn-primary" id="flightSearch">Search Flights</button>
+                                <button id="flightSearch">Search Flights</button>
                             </div>                          
-                            <div class="Availableflights">
-                                <h4 id="Availableflights">Available flights are:</h4>
                             </div>
-                            </div>
+                        </div>
+                        <div class="Availableflights">
+                            <h4 id="Availableflights">Available flights are:</h4>
                         </div>
                     </div>
                     </div>
