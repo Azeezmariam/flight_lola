@@ -1,4 +1,4 @@
-const url = 'https://flight-fare-search.p.rapidapi.com/v2/flights/?from=%3CREQUIRED%3E&to=%3CREQUIRED%3E&date=%3CREQUIRED%3E&adult=%3CREQUIRED%3E';
+async const url = 'https://flight-fare-search.p.rapidapi.com/v2/flights/?from=%3CREQUIRED%3E&to=%3CREQUIRED%3E&date=%3CREQUIRED%3E&adult=%3CREQUIRED%3E';
 const options = {
 	method: 'GET',
 	headers: {
