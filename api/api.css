@@ -148,65 +148,17 @@ header .navbar a {
       font-size: 12px;
       line-height: 15px;
     }
-
-/*     .Flightsearch {
-      width: 600px;
-      margin: auto auto;
-      padding: 20px;
-      background-color: #fff;
-      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-      color: black;
-  }
-
-  .Flightsearch h3 {
-    text-align: center;
-  }
-
-  .form-group {
-    display: block;
-    align-items: center;
-    margin-bottom: 20px;
-}
-
-label {
-    flex: 0 0 100px;
-    font-weight: bold;
-}
-  input {
-      width: 100%;
-      padding: 10px;
-      border: 1px solid #ccc;
-      border-radius: 4px;
-  }
-
-  button {
-      background-color: #007bff;
-      color: #fff;
-      padding: 10px 20px;
-      border: none;
-      border-radius: 4px;
-      cursor: pointer;
-  }
-
-  button:hover {
-      background-color: #b3d3f5;
-  }
-
-  .Availableflights {
-    margin-top: 20px;
-    margin-left: 28%;
-  }
-*/
-
+    
 .Flightsearch {
 margin: 50px auto 50px auto;
 padding: 10px 20px;
 border: 2px solid darkgray;
 border-radius: 10px;
-width: 40%;
+width: 30%;
 min-width: 500px;
 height: 30%;
 background-color: rgba(255, 255, 255, 0.6);
+align-items: center;
 }
 
 
@@ -214,7 +166,9 @@ background-color: rgba(255, 255, 255, 0.6);
 text-align: center;
 padding-top: 0;
 margin: 0;
-font-size: 15px;
+font-size: 30px;
+font-weight: bold;
+color: black;
 }
 
 .flights {
@@ -222,6 +176,7 @@ display: flex;
 justify-content: space-between;
 align-items: center;
 margin-top: 30px;
+color: black;
 }
 
 @media (max-width: 768px) {
@@ -231,10 +186,9 @@ margin-top: 30px;
 }
 
 .Availableflights {
-margin: auto;
-margin-right: 100px;
 margin-top: 10px;
-margin-left: 20px;
+margin-left: 100px;
+align-items: center;
 }
 
 
@@ -258,5 +212,6 @@ margin-top: 15%;
 
 .result{
 margin-top: 20px;
-padding: 10pxs
+padding: 10px;
+margin-left: 40px;
 }

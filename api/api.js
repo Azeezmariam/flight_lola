@@ -13,7 +13,7 @@ async function searchFlights(departureAirport, destinationAirport, date, adult, 
         const response = await fetch(`https://flight-fare-search.p.rapidapi.com/v2/flights/?from=${departureAirport}&to=${destinationAirport}&date=${date}&adult=${adult}`, {
             method: 'GET',
             headers: {
-                'X-RapidAPI-Key': '6b40d026b9msh182876c2def42fbp12c874jsn52683e712fde',
+                'X-RapidAPI-Key': 'd413b30fefmsh6cfba2a3cf56ddap18b957jsn93fe1cc335fa',
                 'X-RapidAPI-Host': 'flight-fare-search.p.rapidapi.com'
             }
         });
@@ -25,19 +25,23 @@ async function searchFlights(departureAirport, destinationAirport, date, adult, 
 
         if (responseSearch.results && responseSearch.results.length > 0) {
             const flights = responseSearch.results;
-
-            let flightInfo = 'Available flights are:\n';
-
+        
+            let flightInfo = '';
+        
             flights.forEach((flight, index) => {
-                flightInfo += `Flight ${index + 1}:\n`;
-                flightInfo += `Departure: ${flight.departureAirport.code} at ${flight.departureAirport.time}\n`;
-                flightInfo += `Arrival: ${flight.arrivalAirport.code} at ${flight.arrivalAirport.time}\n`;
-                flightInfo += `Duration: ${flight.duration.text}\n`;
-                flightInfo += `Cabin Type: ${flight.cabinType}\n`;
-                flightInfo += `Total Price: ${flight.totals.total} ${flight.totals.currency}\n\n`;
+                flightInfo += `<div class="flight-info">`;
+                flightInfo += `<h4>Flight ${index + 1}</h4>`;
+                flightInfo += `<p><span>Flight Name:</span> ${flight.flight_name}</p>`;
+                flightInfo += `<p><span>Flight Code:</span> ${flight.flight_code}</p>`;
+                flightInfo += `<p><span>Departure:</span> ${flight.departureAirport.code} at ${flight.departureAirport.time}</p>`;
+                flightInfo += `<p><span>Arrival:</span> ${flight.arrivalAirport.code} at ${flight.arrivalAirport.time}</p>`;
+                flightInfo += `<p><span>Duration:</span> ${flight.duration.text}</p>`;
+                flightInfo += `<p><span>Cabin Type:</span> ${flight.cabinType}</p>`;
+                flightInfo += `<p><span>Total Price:</span> ${flight.totals.total} ${flight.totals.currency}</p>`;
+                flightInfo += `</div>`;
             });
-
-            resultElement.textContent = flightInfo;
+        
+            resultElement.innerHTML = flightInfo.replace(/\n/g, '<br>');
         } else {
             resultElement.textContent = 'You have exceeded your daily limit or No flight data available for this date.';
         }
